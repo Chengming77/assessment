@@ -1,0 +1,96 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}Athlete{% endblock %}
+{% block link_block %}
+<link href="{% static 'css/ath.css' %}" rel="stylesheet"/><!-- CSS Style Path -->
+{% endblock %}
+
+
+{% block body_block %}
+<div class="ex">
+    <h1>athlete</h1>
+
+    <form>
+        <input type="text"><input type="submit" value="Search">
+        <h3>click the name to see the datails</h3>
+    </form>
+
+</div>
+<hr>
+<div class="ine">
+    <div class="w">
+        <img src="{% static 'images/Su Bingtian.jpg' %}" alt="su">
+        <h2><a href="https://olympics.com/tokyo-2020/olympic-games/en/results/athletics/athlete-profile-n1305807-su-bingtian.htm">Su Bingtian</a></h2>
+        <p>
+            Date of Birth: 29 Aug 1989<br>
+            Age: 31<br>
+            Gender: Male<br>
+            Place of birth: ZHONGSHAN<br>
+            Birth Country: People's Republic of China<br>
+            Place of residence: ZHONGSHAN<br>
+            Residence Country: People's Republic of China<br>
+            Coach: Randy Huntington, USA<br>
+            Injuries: In 2019 he sustained an injury to his waist area.<br>
+            An injury to his knee affected his performance at the<br>
+            2016 World Indoor Championships in Portland,<br>
+            OR, United States of America, but he still participated in<br>
+            the final of the men's 60m event.<br>
+
+
+
+        </p>
+    </div>
+
+
+    <div class="w">
+        <img src="{% static 'images/Peaty Adam.jpg' %}" alt="adam">
+        <h2><a href="https://olympics.com/tokyo-2020/olympic-games/en/results/swimming/athlete-profile-n1444186-peaty-adam.htm">Peaty Adam</a></h2>
+        <p>
+            Date of Birth: 28 Dec 1994<br>
+            Age: 26<br>
+            Gender: Male<br>
+            Place of birth: UTTOXETER<br>
+            Birth Country: Great Britain<br>
+            Place of residence: LOUGHBOROUGH<br>
+            Residence Country: Great Britain<br>
+            Coach: Melanie Marshall, GBR, from 2009<br>
+            Injuries: He was affected by a stretched biceps tendon<br>
+            at the 2018 Commonwealth Games<br>
+            in Gold Coast, QLD, Australia.<br>
+
+
+
+
+        </p>
+    </div>
+
+    <div class="w">
+        <img src="{% static 'images/Dressel Caeleb.jpg' %}" alt="Caeleb">
+        <h2><a href="https://olympics.com/tokyo-2020/olympic-games/en/results/swimming/athlete-profile-n1302244-dressel-caeleb.htm">Dressel Caeleb</a></h2>
+        <p>
+            Date of Birth: 16 Aug 1996<br>
+            Age: 24<br>
+            Gender: Male<br>
+            Place of birth: GREEN COVE SPRINGS, FL<br>
+            Birth Country: United States of America<br>
+            Place of residence: GAINESVILLE, FL<br>
+            Residence Country: United States of America<br>
+            Coach: Gregg Troy [club], USA<br>
+            Injuries: He suffered minor injuries after being involved in <br>
+            a motorcycle accident in June 2018 but recovered in time<br>
+            to compete at the US national championships the following<br>
+            month in Irvine, CA, United States of America.<br>
+
+
+
+        </p>
+    </div>
+
+</div>
+
+
+<p id="tip">click the name to see the datails</p>
+
+
+{% endblock %}

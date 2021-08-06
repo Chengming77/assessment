@@ -1,0 +1,84 @@
+.ex li{
+	list-style: none;
+	width: 150px;
+	height: 30px;
+	border: 1px solid #b0b0b0;
+	float: left;
+	text-align: center;
+	background-color: white;
+}
+
+.ex ul{
+	position: relative;
+	left: 500px;
+	top: -15px;
+}
+
+.ex h1{
+	position: relative;
+	left: -350px;
+	top: 50px;
+}
+
+.ex form{
+	text-align: center;
+}
+
+
+.ex li:hover{
+	background-color: #5897fb;
+}
+
+
+
+#ex1{
+	position: absolute;
+	bottom: 0px;
+	width: 1580px;
+	left: -535px;
+}
+
+#ex2{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#ex1 li{
+	width: 375px;
+}
+
+body {
+	background:url(../images/Background4.jpg) no-repeat 0px 0px fixed;
+    background-size: 110%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	/* background: linear-gradient(#141e30,#243b55); */
+
+}
+
+.login{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 400px;
+	padding: 40px;
+	background-color: rgba(141, 75, 75, 0.2);
+	box-shadow: 0 15px 25px rgba(184, 28, 28, 0.4);
+
+}
+
+.login input{
+	border-radius: 12px;
+	font-size: 10px;
+	background-color: #e7e7e7;
+}
+
+#bt{
+	border-radius: 12px;
+	font-size: 15px;
+	background-color: #ebb2b2;
+	text-align: center;
+}

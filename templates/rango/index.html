@@ -1,0 +1,176 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}Homepage{% endblock %}
+{% block link_block %}
+<link href="{% static 'css/index1.css' %}" rel="stylesheet"/><!-- CSS Style Path -->
+{% endblock %}
+  
+
+
+{% block body_block %}
+<div class="one">
+    <div class="ins">
+        {% if user.is_authenticated %}
+         Welcome to Olympic games web, {{ user.username }}!
+         <a id="b" href="{% url 'rango:login' %}"></a>
+         <a id="b1" href="{% url 'rango:logout' %}">Logout</a>
+        {% else %}
+        Welcome to Olympic games web, partner!
+        <a id="b" href="{% url 'rango:login' %}">Login</a>
+        <a id="b1" href="{% url 'rango:logout' %}"></a>
+        {% endif %}
+        <br>
+        <br>
+        <form>
+            <input type="text" > <input type="submit" value="Search">
+
+        </form>
+    </div>
+
+
+    <div class="calendar-container">
+        <div class="date-container">
+            <span id="preMonth" class="year-prev"></span>
+            <span id="nowYear" class="year-now"></span>
+            <span id="nowMonth"></span>
+            <span id="nowDate"></span>
+            <span id="nextMonth" class="year-next"></span>
+        </div>
+        <div id="weekLine" class="week-line"></div>
+        <div id="dateWrap" class="date-wrap"></div>
+    </div>
+    <hr>
+</div>
+
+<div>
+    <video width="460" height="220" controls="controls" autoplay="autoplay">
+        <source src="{% static 'trailer.mp4' %}" type="video/mp4" />
+
+    </video>
+
+    <div class="ie">
+        <h3>News</h3>
+        <li><a href="https://olympics.com/tokyo-2020/en/news/jamaica-s-hansle-parchment-wins-shock-men-s-110m-hurdles-gold"> Jamaica's Hansle Parchment wins shock men’s 110m hurdles gold</a></li>
+        <br>
+        <br>
+        <li><a href="https://olympics.com/tokyo-2020/en/news/tokyo-2020-table-tennis-day-13-men-s-team-event-final"> Tokyo 2020 table tennis day 13: Men's team event rounds off competition</a></li>
+        <br>
+        <br>
+        <li><a href="https://olympics.com/tokyo-2020/en/news/keegan-palmer-wins-gold-for-australia-in-men-s-park-skateboarding"> Keegan Palmer wins gold for Australia in men's park skateboarding</a></li>
+    </div>
+
+        <div class="title">
+                            <div class="box-rightm-box-center-a">
+                                <ul><p><a href="https://olympics.com/tokyo-2020/olympic-games/en/results/all-sports/medal-standings.htm">  Olympic medal list</a></p>
+                                    <li><i class="m-icon m-icon-copper"></i><span>Rank</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>Country</span></li>
+                                    <li><i class="m-icon m-icon-gold"></i><span>Gold</span></li>
+                                    <li><i class="m-ionc m-icon-silver"></i><span>Silver</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>Bronze</span></li>
+                                    <li><span>Total</span></li>
+                                </ul>
+
+                                <br>
+                                <ul>
+
+                                    <li><i class="m-icon m-icon-copper"></i><span> 1</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span> China</span></li>
+                                    <li><i class="m-icon m-icon-gold"></i><span>  33</span></li>
+                                    <li><i class="m-ionc m-icon-silver"></i><span> 24</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>  16</span></li>
+                                    <li><span>  73</span></li>
+                                </ul>
+                                <br>
+                                <ul>
+
+                                    <li><i class="m-icon m-icon-copper"></i><span> 2</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span> America</span></li>
+                                    <li><i class="m-icon m-icon-gold"></i><span> 27</span></li>
+                                    <li><i class="m-ionc m-icon-silver"></i><span> 34</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>  24</span></li>
+                                    <li><span>  85</span></li>
+                                </ul>
+
+                                <br>
+                                <ul>
+
+                                    <li><i class="m-icon m-icon-copper"></i><span> 3</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>  Japan</span></li>
+                                    <li><i class="m-icon m-icon-gold"></i><span>  21</span></li>
+                                    <li><i class="m-ionc m-icon-silver"></i><span> 7</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>  13</span></li>
+                                    <li><span>  41</span></li>
+                                </ul>
+                                <br>
+                                <ul>
+
+                                    <li><i class="m-icon m-icon-copper"></i><span> 4</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span> Australia</span></li>
+                                    <li><i class="m-icon m-icon-gold"></i><span> 17</span></li>
+                                    <li><i class="m-ionc m-icon-silver"></i><span> 4</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>  18</span></li>
+                                    <li><span>  39</span></li>
+                                </ul>
+                                <br>
+                                <ul>
+
+                                    <li><i class="m-icon m-icon-copper"></i><span> 5</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>  ROC</span></li>
+                                    <li><i class="m-icon m-icon-gold"></i><span>  15</span></li>
+                                    <li><i class="m-ionc m-icon-silver"></i><span> 21</span></li>
+                                    <li><i class="m-icon m-icon-copper"></i><span>  19</span></li>
+                                    <li><span>  55</span></li>
+                                </ul>
+                            </div>
+                        </div>
+<hr style="position: relative;top: -270px;left: -180px;">
+    <div>
+
+    </div>
+
+    <img src="{% static 'images/Swimming.png' %}" alt="Picture of Sport" style="width: 480px;height: 235px;position: relative;top: -130px;left: -280px;">
+
+    <a style="position: absolute;left: 500px;top: 930px;">
+        <h2>swimming</h2><br><br>
+        Swimmers compete to achieve the fastest time while covering a designated distance using a predetermined stroke (freestyle, backstroke, breaststroke or butterfly).<br><br>
+        Although no specific stroke is prescribed for freestyle events, all swimmers currently use the crawl, which is the fastest stroke<br><br>
+        At Rio 2016, 32 men's and women's events were held in the pool, including individual and relay races. At Tokyo 2020, there will be 35 events,<br><br>
+        with the addition of three new competitions: 800m freestyle (men), 1,500m freestyle (women) and 4×100m medley relay (mixed).<br><br>
+        The sport's International Federation FINA  was formed during the London 1908 Olympic Games,<br><br>
+        when a pool was used for the first time in Olympic competition and rules were standardised.
+    </a>
+<div style="width: 200px;height: 30px;border: 1px solid #b0b0b0;text-align: center ;position: absolute;left: 1100px;top:950px;">
+    <a  href="{% url 'rango:sport' %}">More</a>
+</div>
+    </div>
+<hr>
+
+
+<div style="width: 200px;height: 30px;border: 1px solid #b0b0b0;text-align: center ;position: absolute;left: 80px;top: 1550px;">
+    <a  href="{% url 'rango:athlete' %}">More</a>
+</div>
+<a style="position: absolute;left: 330px;top: 1470px;">
+    <h2>Su Bingtian</h2><br><br>
+    Chinese sprinter. He was the first ever Asian-born sprinter to break the 10-second barrier of the 100 metres event in track and field.<br><br>
+    His personal best in the 100 metres makes him the current holder of the 100 m Asian record.<br><br>
+    Su's personal best in the 60 metres of 6.42 seconds makes him the current holder of the 60 m Asian record<br><br>
+    and places him within the top five of all-time 60 metres performances
+</a>
+
+<img src="{% static 'images/Su.jpg' %}" alt="Picture of Athlete" style="width: 400px;height: 250px;position: relative;top: 20px;left: 1150px;">
+</div>
+<br>
+<br>
+<br>
+
+<div id="a">
+    <h2>User Information</h2>
+    {% for pet in lucky %}
+    <label>email :{{pet.email}}</label><br><br>
+    <label>username :{{pet.name}}</label>
+    {% endfor %}
+    <br><br><a href="/login/">login</a>
+</div>
+
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}

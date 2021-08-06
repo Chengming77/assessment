@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+    <head lang="en">
+        <meta charset="UTF-8" />
+        <title>Rango - {% block title_block %}Olympic games web{% endblock %}</title>
+        {% block link_block %}
+        {% endblock %}
+        <link href="{% static 'css/bases.css' %}" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <div class="ex" id="ex2">
+            <ul>
+                <li id="hp"><a href="{% url 'rango:index' %}">homepage</a></li>
+                <li id="sp"><a href="{% url 'rango:sport' %}">sport</a></li>
+                <li id="al"><a href="{% url 'rango:athlete' %}">athlete</a></li>
+            </ul>
+
+        </div>
+
+
+        {% block body_block %}
+        {% endblock %}
+
+        <div  class="ex" id="ex1">
+            <ul>
+                <li><a href="{% url 'rango:register' %}">register</a></li>
+        
+                <li><a href="{% url 'rango:contact' %}">contact us</a></li>
+                <li><a href="#">About</a></li>
+        
+                <li><a href="#">F A Q</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

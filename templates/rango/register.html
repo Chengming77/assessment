@@ -1,0 +1,28 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Register
+{% endblock %}
+{% block link_block %}
+<link href="{% static 'css/log.css' %}" rel="stylesheet"/><!-- CSS Style Path -->
+{% endblock %}
+
+
+{% block body_block %}
+<div class="login">
+<br>
+<h1>Register for Rango</h1>
+{% if registered %}
+<a href="{% url 'rango:index' %}">Return to the homepage.</a><br />
+{% else %}
+<form id="user_form" method="post" action="{% url 'rango:register' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+
+    <input id="bt" type="submit" name="submit" value="Register" />
+</form>
+</div>
+{% endif %}
+{% endblock %}

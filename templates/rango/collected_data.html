@@ -1,0 +1,18 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}Data{% endblock %}
+{% block link_block %}
+<link href="{% static 'css/codata.css' %}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block body_block %}
+
+<textarea id="list">  
+</textarea>
+<script src="{% static 'js/data.js' %}"></script>
+<div><input type="button" onclick="loadAll();" value="Display" /></div>
+<div><input type="button" onclick="del();" value="Clear" /></div>
+
+{% endblock %}

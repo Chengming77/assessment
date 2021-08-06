@@ -1,0 +1,101 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}Sport{% endblock %}
+{% block link_block %}
+ <link href="{% static 'css/sport.css' %}" rel="stylesheet"/><!-- CSS Style Path -->
+ {% endblock %}
+
+
+{% block body_block %}
+<div class="ex">
+    <h1>sport</h1>
+    <form>
+        <input type="text" > <input type="submit" value="Search">
+        <h3>click the name to see the datails</h3>
+    </form>
+
+</div>
+<hr>
+<img src="{% static 'images/AthleticsIcon.png' %}" alt="Picture of athletics">
+
+<a class="pic" href="https://olympics.com/tokyo-2020/en/sports/athletics/">
+    <h2>Athletics</h2><br><br>
+    The athletics track at the Olympic Stadium is a 400m oval. For all track events the finish line is in the same place,<br><br>
+    at the end of the ‘home straight’. The track programme comprises sprints, middle-distance and long-distance events for<br><br>
+    men and women; hurdles and steeplechase races; and relays. Most events start with heats, with the fastest athletes or <br><br>
+    teams progressing to semi-finals and then the final.To become the fastest human being at a particular distance requires<br><br>
+    not only speed but also supreme fitness, strength and the ability to master challenging techniques, such as the start <br><br>
+    in sprints and clearing the barriers in hurdles and steeplechase events.
+</a>
+<div class="en">
+    <a href="#">comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="myfunction()"  href="#">likes</a>
+</div>
+<hr>
+<img src="{% static 'images/TableTennisIcon.png' %}" alt="Picture of table tennis">
+
+<a class="pic" href="https://olympics.com/tokyo-2020/en/sports/table-tennis/">
+    <h2>table-tennis</h2><br><br>
+    Table tennis has come a long way from its late 19th century origins as an after-dinner game played by upper-class <br><br>
+    English families. More than a century later, table tennis has a greater number of recreational players than any other<br><br>
+    sport and Olympic-level competition is a breathtaking spectacle.Legend has it that the first players used the lids of<br><br>
+    cigar boxes for rackets and a rounded-off cork from a champagne bottle as the ball. Old-fashioned names for table <br><br>
+    tennis include 'ping pong', 'whiff waff' and 'flim flam', reflecting the sound of the ball being struck. Today,<br><br>
+    the game is played with sophisticated rackets comprising a wooden blade coated with rubber on both sides, and a <br><br>
+    hollow plastic ball weighing just 2.7g.
+</a>
+<div class="en">
+    <a href="#">comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="myfunction()" href="#">likes</a>
+</div>
+<hr>
+<img src="{% static 'images/ArcheryIcon.png' %}" alt="Picture of Archery">
+
+<a class="pic" href="https://olympics.com/tokyo-2020/en/sports/archery/">
+    <h2>Archery</h2><br><br>
+    Archery dates back over 10,000 years, when bows and arrows were first used for hunting and warfare, before it developed<br><br>
+    as a competitive activity in medieval England.<br><br>
+    There are several variants, including target archery, where competitors shoot at stationary targets on a flat range;<br><br>
+    and field archery, which involves shooting at targets of varying and often unmarked distance, typically in woodland<br><br>
+    and rough terrain. Only target archery is an Olympic sport, practised in more than 140 countries around the world.
+</a>
+<div class="en">
+    <a href="#">comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="myfunction()"  href="#">likes</a>
+</div>
+<hr>
+<img src="{% static 'images/KarateIcon.png' %}" alt="Picture of Karate">
+
+<a class="pic" href="https://olympics.com/tokyo-2020/en/sports/karate/">
+    <h2>Karate</h2><br><br>
+    Karate is a martial art that originated in Okinawa during the Ryukyu Dynasty period.<br><br>
+    It spread throughout Japan during the 1920s and then worldwide following World War II. It is predominantly a striking,<br><br>
+    kicking and punching art.<br><br>
+    A karate practitioner is called a karateka.<br><br>
+    Karate's quest to secure a place on the Olympic programme dates back to the 1970s. <br><br>
+    In 2015, the Tokyo 2020 Organising Committee proposed the inclusion of karate as one of five additional sports,<br><br>
+    a decision that was approved by the International Olympic Committee. Athletes will compete at the Nippon Budokan,<br><br>
+    the spiritual home of Japanese martial arts and a legacy venue from the Tokyo 1964 Games.
+</a>
+<div class="en">
+    <a href="#">comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="myfunction()"  href="#">likes</a>
+</div>
+<hr>
+<img src="{% static 'images/SwimmingIcon.png' %}" alt="Picture of Swimming">
+
+<a class="pic" href="https://olympics.com/tokyo-2020/en/sports/swimming/">
+    <h2>Swimming</h2><br><br>
+    Swimmers compete to achieve the fastest time while covering a designated distance using a predetermined stroke<br><br>
+    (freestyle, backstroke, breaststroke or butterfly).<br><br>
+    Although no specific stroke is prescribed for freestyle events, all swimmers currently use the crawl, which is <br><br>
+    the fastest stroke.
+    At Rio 2016, 32 men's and women's events were held in the pool, including individual and relay races.<br><br> 
+    At Tokyo 2020,there will be 35 events,with the addition of three new competitions: 800m freestyle (men), 1,500m <br><br>
+    freestyle (women) and 4×100m medley relay (mixed).The sport's International Federation FINA  was formed during <br><br>
+    the London 1908 Olympic Games, when a pool was used for the first time in Olympic competition and rules were standardised.
+
+</a>
+<div class="en">
+    <a href="#">comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="myfunction()"  href="#">likes</a>
+</div>
+<script src="{% static 'js/sport.js' %}"></script>
+
+{% endblock %}

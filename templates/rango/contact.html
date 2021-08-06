@@ -1,0 +1,71 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}Contact us{% endblock %}
+
+{% block link_block %}
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/formsubmit.js' %}"></script>
+    
+    <link href="{% static 'css/contact.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/form.css' %}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block body_block %}
+
+<section>
+<form id="contact" name="contact"
+method="post">
+<fieldset id="contInfo">
+   <legend>Contact Information</legend>
+   
+   <label for="name">Name</label>
+   <input name="name" id="name" 
+   placeholder="first and last name"
+   required="required"/>  
+   
+   <label for="age">Age</label>
+   <input name="age" id="age" 
+   placeholder="number"
+   required="required"/>
+               
+   <label for="phone">Phone</label>
+   <input name="phone" id="phone" type="tel"
+   placeholder="Eight to ten digits"
+   pattern="[0-9]{8,10}"
+   required="required"/>
+   
+   <label for="gender">Gender</label>
+   <input name="gender" id="gender" 
+   placeholder="male or female"
+   required="required"/>
+
+
+
+</fieldset>
+
+
+
+<div id="comment">
+<label for= "comments">Do you have any comments?</label>
+
+         <textarea name="comments" id="comments"></textarea>
+ </div>
+ 
+ 
+         <div>
+            <input type="button" onclick="save()" value="Submit" />
+            <input type="reset" value="Clear" />
+         </div>
+         
+<script src="{% static 'js/contact.js' %}"></script>
+
+</form>
+</section>
+
+<div id="go">
+<a href="{% url 'rango:collected_data' %}">click to see the data</a>
+</div>
+
+{% endblock %}

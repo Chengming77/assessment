@@ -1,0 +1,32 @@
+.ex li:hover{
+    background-color: #5897fb;
+}
+a{
+    text-decoration: none;
+}
+
+.ex li{
+    background-color: white;
+}
+
+/* body{
+    background:url(../images/Background.jpg) no-repeat 0px 0px fixed;
+    background-size: 100%;
+    font-size: 16px;
+    margin: 0px auto;
+    position: relative;
+
+    
+} */
+
+/* #b{
+    position: float left;
+    margin-left: 800px;
+    
+}
+
+#b1{
+    position: float left;
+    margin-left: 900px;
+    
+} */

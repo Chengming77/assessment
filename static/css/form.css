@@ -1,0 +1,79 @@
+@charset "UTF-8";
+fieldset {
+   background-color: white;
+   border: 1px solid black;
+   float: left;
+   width: 50%;
+   margin-left:25%;
+   margin-top:3%;
+}
+
+legend {
+   background-color: rgb(192,192,192);
+   color: white;
+   padding: 3px 0px;
+   text-indent: 5px;
+   width: 100%;
+}
+
+label {
+   clear: left;
+   display: block;
+   float: left;
+   font-size: 150%;
+   margin-left:5px;
+   width: 40%;
+}
+
+
+input {
+   display: block;
+   float: left;
+   font-size: 0.9em;
+   margin: 7px 0px;
+   width: 50%;
+}
+
+#comment label{
+	margin-left:20%;
+	clear:both;
+	color:white;
+}
+
+#comment textarea{
+   display: block;
+   height: 320px;
+   margin-left:25%;
+   width: 51%;
+	}
+
+form p {
+   text-align: center;
+}
+
+
+   
+input:focus:valid {
+   background: rgb(220, 255, 220) url(go.png) bottom right no-repeat;
+
+   -o-background-size: contain;
+   -moz-background-size: contain;
+   -webkit-background-size: contain;
+   background-size: contain;
+}
+
+input:focus:invalid {
+   background: rgb(255, 232, 233) url(stop.png) bottom right no-repeat;
+
+   -o-background-size: contain;
+   -moz-background-size: contain;
+   -webkit-background-size: contain;
+   background-size: contain;
+}
+
+input[type="button"], input[type="reset"] {
+   display: inline;
+   float: left;
+   height: 40px;
+   width: 100px;
+   margin-left:25%;}

@@ -1,0 +1,158 @@
+        .calendar-container {
+            position: relative;
+            left: 1100px;
+            top: -100px;
+
+            padding: 30px;
+            width: 576px;
+        }
+
+        .date-container {
+            position: relative;
+            left: 100px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        /*上一月下一月按钮*/
+        #preMonth,#nextMonth {
+            position: relative;
+        }
+        #preMonth:after {
+            content: '<';
+            position: absolute;
+            left: -28px;
+            top: -1px;
+            width: 24px;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 21px;
+            background-color:brown;
+            color: white;
+        }
+        #nextMonth:after {
+            content: '>';
+            position: absolute;
+            left: 4px;
+            top: -1px;
+            width: 24px;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 21px;
+            background-color:brown;
+            color: white;
+        }
+        #nowYear,#nowMonth,#nowDate{
+            padding: 0 5px;
+        }
+
+
+        .week-item {
+            display: inline-block;
+            width: 40px;
+            height: 30px;
+            line-height: 60px;
+            border: 1px solid white;
+            text-align: center;
+        }
+
+        .date-item {
+            display: inline-block;
+            width: 40px;
+            line-height: 30px;
+            border: 1px solid #EEEEEE;
+            text-align: center;
+        }
+        .ins{
+            position: relative;
+            left: 150px;
+            top: 30px;
+        }
+
+        .ins h2{
+            position: relative;left: -500px;
+        }
+
+        .en{
+            position: relative;
+            left: 1200px;
+            top: -100px;
+            
+        }
+
+        .en hr{
+            position: relative;top: -60px;
+        }
+        
+        .ie{
+            position: relative;
+            left: 480px;
+            top: -250px;
+        }
+
+        .box-rightm-box-center-a ul{
+            position: relative;
+            left: -100px;
+        }
+        .box-rightm-box-center-a ul li{
+            float: left;
+            margin-left: 20px;
+            list-style: none;
+        }
+
+        .box-rightm-box-center-a ul p{
+            position: relative;left: 100px;
+        }
+        
+        .title{
+            position: relative;
+            left: 1150px;
+            top: -450px;
+        }
+
+        .ex li{
+            list-style: none;
+            width: 150px;
+            height: 30px;
+            border: 1px solid #b0b0b0;
+            float: left;
+            text-align: center;
+        }
+
+        #hp{
+            background-color: #5897fb;
+        }
+        
+        .ex ul{
+            position: relative;
+            left: 500px;
+            top: -15px;
+        }
+
+        #a{
+            position: relative;
+            left: 880px;
+            top:-1780px;
+            display: none;
+        }
+
+        #ex1{
+            position: absolute;
+            top: 1867px;
+            width: 1580px;
+            left: -535px;
+        }
+        
+        #ex1 li{
+            width: 375px;
+        }
+
+        body{
+            background:url(../images/Background3.jpg) no-repeat 0px 0px fixed;
+            background-size: 120%;
+            font-size: 16px;
+            margin: 0px auto;
+            position: relative;
+        
+            
+        }

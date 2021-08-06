@@ -1,0 +1,73 @@
+
+
+#go{
+	clear:both;
+	margin:5px;
+	
+}
+
+#go a{
+	color:rgb(22, 20, 20);
+	font-size:200%;
+	margin-left:40%;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+a{
+	text-decoration: none;
+}
+
+.ex li{
+	list-style: none;
+	width: 150px;
+	height: 30px;
+	border: 1px solid #b0b0b0;
+	float: left;
+	text-align: center;
+	background-color: white;
+}
+
+.ex ul{
+	position: relative;
+	left: 500px;
+	top: -15px;
+}
+
+.ex h1{
+	position: relative;
+	left: -350px;
+	top: 50px;
+}
+
+.ex form{
+	text-align: center;
+}
+
+
+.ex li:hover{
+	background-color: #5897fb;
+}
+
+
+
+#ex1{
+	position: absolute;
+	top: 900px;
+	width: 1580px;
+	left: -535px;
+}
+
+#ex1 li{
+	width: 375px;
+}
+
+body{
+	background:url(../images/Background.jpg) no-repeat 0px 0px fixed;
+	background-size: 100%;
+	font-size: 16px;
+	margin: 0px auto;
+	position: relative;
+
+	
+}
