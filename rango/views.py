@@ -23,10 +23,10 @@ def index(request):
     if uname:
         users = user.objects.filter(email=uname)
         if not users:  
-            return render(request, 'rango/login.html', {'u': '没有这个邮箱'})
+            return render(request, 'rango/login.html', {'u': 'donot have this email'})
         psw = user.objects.filter(password=password)
         if not psw:
-            return render(request, 'rango/login.html', {'us': '密码错误'})
+            return render(request, 'rango/login.html', {'us': 'wrong password'})
 
         return render(request, 'rango/index.html', {'lucky': users})
 
