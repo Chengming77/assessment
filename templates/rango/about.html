@@ -4,14 +4,16 @@
 {% block title_block %}
     About Rango
 {% endblock %}
+{% block link_block %}
+ <link href="{% static 'css/about.css' %}" rel="stylesheet"/><!-- CSS Style Path -->
+ {% endblock %}
 
 {% block body_block %}
+<br>
 <h1>Rango says...</h1>
 <div>
     here is the about page. <br />
-    This tutorial has been put together by Xueyong Cao. <br />
-    <p>Visits: {{ visits }}</p>
+    This tutorial has been put together by Group Element. <br />
 </div>
-<img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
-<img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat" />
+<img src="{% static 'images/rings.jpg' %}" alt="Picture of rings" />
 {% endblock %}

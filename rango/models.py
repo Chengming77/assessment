@@ -27,10 +27,12 @@ class meda(models.Model):
 class Sport(models.Model):
     NAME_MAX_LENGTH = 128
     name = models.CharField(max_length=NAME_MAX_LENGTH, unique=True)
+    info = models.CharField(max_length=1024, null=True)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     slug = models.SlugField(unique=True)
-    information = models.TextField(NAME_MAX_LENGTH)
+    pic_url = models.CharField(max_length=128, null=True)
+    web_url = models.URLField()
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -45,10 +47,11 @@ class Sport(models.Model):
 class Athlete(models.Model):
     NAME_MAX_LENGTH = 128
     name = models.CharField(max_length=NAME_MAX_LENGTH, unique=True)
+    info = models.CharField(max_length=1024, null=True)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     slug = models.SlugField(unique=True)
-    information = models.TextField()
+    
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

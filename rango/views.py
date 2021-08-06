@@ -15,11 +15,14 @@ from rango.models import UserProfile
 from rango.forms import UserForm, UserProfileForm
 
 def index(request):
-    uname = request.POST.get('uname')  # 获取用户名字
+    sport_list = Sport.objects.order_by('-likes')[:5]
+    athlete_list = Athlete.objects.order_by('-likes')[:5]
+    context_dict = {'sports': sport_list,'athletes':athlete_list}
+    uname = request.POST.get('uname')  
     password = request.POST.get('password')
     if uname:
         users = user.objects.filter(email=uname)
-        if not users:  # 判断账号是否正确
+        if not users:  
             return render(request, 'rango/login.html', {'u': '没有这个邮箱'})
         psw = user.objects.filter(password=password)
         if not psw:
@@ -27,36 +30,19 @@ def index(request):
 
         return render(request, 'rango/index.html', {'lucky': users})
 
-    return render(request, 'rango/index.html')
+    return render(request, 'rango/index.html',context_dict)
 
-
+def sport(request):
+    context_dict = {}
+    sport_list = Sport.objects.all()
+    context_dict = {'sports': sport_list}
+   
+    return render(request, 'rango/sport.html',context=context_dict)
 
 def about(request):
 
-    context_dict = {'This is olympic web!'}
-    context_dict['visits'] = request.session['visits']
+    return render(request, 'rango/about.html')
 
-    return render(request, 'rango/about.html', context=context_dict)
-
-#this method will show sports, if you want to get sports from database,please use this method!
-def show_sport(request,sport_name_slug):
-    context_dict = {}
-    #return sport object to front
-    try: 
-        sport = Sport.object.get(slug = sport_name_slug)
-        context_dict['sport'] = sport
-    except Sport.DoesNotExist:
-        context_dict['sport'] = None
-    return render(request,'rango/sport.html',context_dict)
-
-def show_athlete(request,athlete_name_slug):
-    context_dict = {}
-    try:
-        athlete = Athlete.object.get(slug = athlete_name_slug)
-        context_dict['athlete']  =athlete
-    except Athlete.DoesNotExist:
-        context_dict['athlete'] = None
-    return render(request,'rango/athlete.html',context_dict)
 
 def like_sport(request):
     sport_id = None
@@ -71,20 +57,7 @@ def like_sport(request):
             sport.save()
     return HttpResponse(likes)
 
-def like_athlete(request):
-    athlete_id = None
-    if request.method == 'GET':
-        athlete_id = request.GET['athlete_id']
-    likes = 0
-    if athlete_id:
-        athlete = Athlete.objects.get(id = int(athlete_id))
-        if athlete:
-            likes = athlete.likes + 1
-            athlete.likes = likes
-            athlete.save()
-    return HttpResponse(likes)
-
-    
+   
 
 def register(request):
     registered = False
@@ -117,8 +90,6 @@ def register(request):
                            'profile_form': profile_form, 
                            'registered': registered})
 
-def sport(request):
-    return render(request, 'rango/sport.html')
 
 
 def athlete(request):
